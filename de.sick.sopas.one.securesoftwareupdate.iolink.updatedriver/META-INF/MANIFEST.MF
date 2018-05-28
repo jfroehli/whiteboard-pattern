@@ -5,5 +5,7 @@ Bundle-SymbolicName: de.sick.sopas.one.securesoftwareupdate.iolink.updatedriver
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: de.sick.sopas.one.securesoftwareupdate.api,
- org.osgi.framework;version="1.8.0"
-Bundle-Activator: de.sick.sopas.one.securesoftwareupdate.iolink.updatedriver.IOLinkBundleActivator
+ org.osgi.framework;version="1.8.0",
+ org.osgi.service.component.annotations;version="1.3.0"
+Service-Component: OSGI-INF/de.sick.sopas.one.securesoftwareupdate.iolink.updatedriver.IOLinkUpdateDriver.xml
+Bundle-ActivationPolicy: lazy

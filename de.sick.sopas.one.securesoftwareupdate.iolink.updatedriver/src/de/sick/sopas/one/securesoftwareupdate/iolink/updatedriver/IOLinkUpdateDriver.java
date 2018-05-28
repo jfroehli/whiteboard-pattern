@@ -1,8 +1,12 @@
 package de.sick.sopas.one.securesoftwareupdate.iolink.updatedriver;
 
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+
 import de.sick.sopas.one.securesoftwareupdate.api.IUpdateDriver;
 import de.sick.sopas.one.securesoftwareupdate.api.IUpdateListener;
 
+@Component
 public class IOLinkUpdateDriver implements IUpdateDriver {
 
 	@Override
@@ -30,6 +34,11 @@ public class IOLinkUpdateDriver implements IUpdateDriver {
 	@Override
 	public boolean accept(String name, String version) {
 		return "iolink".equalsIgnoreCase(name);
+	}
+	
+	@Activate
+	public void onActivate() {
+		System.out.println("IOLink Driver activated!");
 	}
 
 }
