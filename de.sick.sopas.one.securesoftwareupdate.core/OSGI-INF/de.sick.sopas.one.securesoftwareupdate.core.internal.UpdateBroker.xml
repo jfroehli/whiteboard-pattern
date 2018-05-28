@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="de.sick.sopas.one.securesoftwareupdate.core.internal.UpdateBroker">
+   <service>
+      <provide interface="de.sick.sopas.one.securesoftwareupdate.core.api.ISecureSoftwareUpdate"/>
+   </service>
+   <reference cardinality="1..1" field="matcher" interface="de.sick.sopas.one.securesoftwareupdate.core.internal.matcher.IUpdateDriverMatcher" name="matcher"/>
+   <implementation class="de.sick.sopas.one.securesoftwareupdate.core.internal.UpdateBroker"/>
+</scr:component>

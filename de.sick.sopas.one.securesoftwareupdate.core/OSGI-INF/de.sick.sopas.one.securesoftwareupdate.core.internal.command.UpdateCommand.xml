@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="de.sick.sopas.one.securesoftwareupdate.core.internal.command.UpdateCommand">
+   <property name="osgi.command.scope" type="String" value="tutorial"/>
+   <property name="osgi.command.function" type="String" value="startUpdate"/>
+   <service>
+      <provide interface="de.sick.sopas.one.securesoftwareupdate.core.internal.command.UpdateCommand"/>
+   </service>
+   <reference cardinality="1..1" field="updater" interface="de.sick.sopas.one.securesoftwareupdate.core.api.ISecureSoftwareUpdate" name="updater"/>
+   <implementation class="de.sick.sopas.one.securesoftwareupdate.core.internal.command.UpdateCommand"/>
+</scr:component>
